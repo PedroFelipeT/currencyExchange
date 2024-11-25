@@ -1,24 +1,36 @@
+import 'package:currency_exchange_app/home/data/bloc/currency_bloc.dart';
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'home/ui/home_page.dart';
+import 'home/data/datasources/currency_controller.dart';
+import 'home/data/repositories/currency_repository.dart';
+import 'home/ui/page/home_page.dart';
+import 'shared/theme/app_colors.dart';
 
 void main() {
-  runApp(const MyApp());
+  final dio = Dio();
+  final dataSource = CurrencyDataSource(dio: dio);
+  final repository = CurrencyRepository(currencyDatasource: dataSource);
+  runApp(MyApp(currencyRepository: repository));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final CurrencyRepository currencyRepository;
+  const MyApp({super.key, required this.currencyRepository});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        scaffoldBackgroundColor: AppColors.white,
         useMaterial3: true,
       ),
-      home: const HomePage(),
+      home: BlocProvider(
+        create: (context) => CurrencyBloc(currencyRepository),
+        child: const HomePage(),
+      ),
     );
   }
 }

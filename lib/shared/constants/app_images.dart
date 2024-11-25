@@ -1,5 +1,5 @@
 const _svgsRoot = 'assets/svg';
-const _assetsRoot = 'assets';
+//const _assetsRoot = 'assets';
 
 enum AppImages {
   //SVG
