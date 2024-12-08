@@ -387,33 +387,6 @@ class _HomePageState extends State<HomePage> {
                                                     ),
                                                   ),
                                                 ),
-                                                // RichText(
-                                                //   text: TextSpan(
-                                                //     children: [
-                                                //       const TextSpan(
-                                                //         text: "CLOSE:",
-                                                //         style: TextStyle(
-                                                //           fontWeight:
-                                                //               FontWeight.w500,
-                                                //           color: AppColors
-                                                //               .neutralDark, // Cor do texto do rótulo
-                                                //           fontSize: 11,
-                                                //         ),
-                                                //       ),
-                                                //       TextSpan(
-                                                //         text:
-                                                //             "R\$ ${currency.close.toStringAsFixed(4)}",
-                                                //         style: const TextStyle(
-                                                //           fontWeight:
-                                                //               FontWeight.w600,
-                                                //           color: AppColors
-                                                //               .neutralDark,
-                                                //           fontSize: 16,
-                                                //         ),
-                                                //       ),
-                                                //     ],
-                                                //   ),
-                                                // ),
                                                 const Spacer(),
                                                 const SizedBox(
                                                   width: 50,
@@ -441,33 +414,6 @@ class _HomePageState extends State<HomePage> {
                                                     ),
                                                   ),
                                                 ),
-                                                // RichText(
-                                                //   text: TextSpan(
-                                                //     children: [
-                                                //       const TextSpan(
-                                                //         text: "LOW: ",
-                                                //         style: TextStyle(
-                                                //           fontWeight:
-                                                //               FontWeight.w500,
-                                                //           color: AppColors
-                                                //               .neutralDark,
-                                                //           fontSize: 11,
-                                                //         ),
-                                                //       ),
-                                                //       TextSpan(
-                                                //         text:
-                                                //             "R\$ ${currency.low.toStringAsFixed(4)}",
-                                                //         style: const TextStyle(
-                                                //           fontWeight:
-                                                //               FontWeight.w600,
-                                                //           color: AppColors
-                                                //               .neutralDark,
-                                                //           fontSize: 16,
-                                                //         ),
-                                                //       ),
-                                                //     ],
-                                                //   ),
-                                                // ),
                                               ],
                                             ),
                                             const SizedBox(height: 8),
@@ -497,7 +443,6 @@ class _HomePageState extends State<HomePage> {
                                                       fontSize: 16,
                                                     ),
                                                   ),
-
                                                 Text(
                                                   '${currency.closeDiff.toStringAsFixed(2)}%',
                                                   style: TextStyle(
@@ -511,40 +456,6 @@ class _HomePageState extends State<HomePage> {
                                                     fontSize: 16,
                                                   ),
                                                 ),
-                                                // RichText(
-                                                //   text: TextSpan(
-                                                //     children: [
-                                                //       const TextSpan(
-                                                //         text: "CLOSE DIFF (%): ",
-                                                //         style: TextStyle(
-                                                //           fontWeight:
-                                                //               FontWeight.w500,
-                                                //           color: AppColors
-                                                //               .neutralDark,
-                                                //           fontSize: 11,
-                                                //         ),
-                                                //       ),
-                                                //       TextSpan(
-                                                //         text:
-                                                //             "R\$ ${CustomTextFormatter.calcularDiferencaPercentual(currency.open, currency.close)}",
-                                                //         style: TextStyle(
-                                                //           fontWeight:
-                                                //               FontWeight.w600,
-                                                //           color: CustomTextFormatter
-                                                //                       .calcularDiferencaPercentual(
-                                                //                           currency
-                                                //                               .open,
-                                                //                           currency
-                                                //                               .close) <
-                                                //                   0
-                                                //               ? Colors.red
-                                                //               : Colors.green,
-                                                //           fontSize: 16,
-                                                //         ),
-                                                //       ),
-                                                //     ],
-                                                //   ),
-                                                // ),
                                                 const SizedBox(
                                                   width: 10,
                                                 ),

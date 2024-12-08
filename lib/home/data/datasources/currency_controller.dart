@@ -6,9 +6,7 @@ abstract interface class ICurrencyDataSource {
 }
 
 class CurrencyDataSource implements ICurrencyDataSource {
-  final Dio dio;
-
-  CurrencyDataSource({required this.dio});
+  final Dio _dio = Dio();
 
   @override
   Future getCurrentExchangeRate(String fromSymbol) async {
@@ -20,7 +18,7 @@ class CurrencyDataSource implements ICurrencyDataSource {
         "to_symbol": 'BRL'
       };
 
-      var response = await dio.get(
+      var response = await _dio.get(
         "https://api-brl-exchange.actionlabs.com.br/api/1.0/open/currentExchangeRate",
         queryParameters: valueData,
         options: Options(headers: headers),
@@ -51,7 +49,7 @@ class CurrencyDataSource implements ICurrencyDataSource {
         "to_symbol": 'BRL'
       };
 
-      var response = await dio.get(
+      var response = await _dio.get(
         "https://api-brl-exchange.actionlabs.com.br/api/1.0/open/dailyExchangeRate",
         queryParameters: valueData,
         options: Options(headers: headers),

@@ -1,5 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../repositories/currency_repository.dart';
+import '../repository/currency_repository.dart';
 import 'currency_state.dart';
 import 'currency_event.dart';
 
